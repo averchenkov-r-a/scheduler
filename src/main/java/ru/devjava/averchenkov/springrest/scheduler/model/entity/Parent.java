@@ -69,7 +69,7 @@ public class Parent {
     }
 
     @JsonIgnore
-    @OneToMany(mappedBy = "parent", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "parent", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     public Collection<Child> getChilds() {
         return childs;
     }

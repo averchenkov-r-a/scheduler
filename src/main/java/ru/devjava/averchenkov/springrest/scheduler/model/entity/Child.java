@@ -79,7 +79,7 @@ public class Child {
     }
 
     @JsonIgnore
-    @OneToMany(mappedBy = "child", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "child", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     public Collection<Task> getTasks() {
         return tasks;
     }
