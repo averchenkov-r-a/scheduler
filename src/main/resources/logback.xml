@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="StdOut" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                %d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n
+            </Pattern>
+        </layout>
+    </appender>
+
+    <logger name="org.springframework" level="info" additivity="false">
+        <appender-ref ref="StdOut" />
+    </logger>
+
+    <logger name="ru.devjava.averchenkov.springrest.scheduler" level="debug" additivity="false">
+        <appender-ref ref="StdOut" />
+    </logger>
+
+    <root level="error">
+        <appender-ref ref="StdOut" />
+    </root>
+</configuration>
